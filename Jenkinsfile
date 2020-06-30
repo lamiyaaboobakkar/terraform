@@ -44,7 +44,7 @@ pipeline
                 script
                 {
                     // Paln the resources that are going to be created
-                    sh 'terraform plan -out=tfplan -input= false'
+                    sh 'terraform plan -input= false'
                 }
             }
         }
