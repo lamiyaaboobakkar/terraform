@@ -33,7 +33,7 @@ pipeline
                 script
                 {
                     // Initialize Terraform
-                    sh 'terraform init'
+                    sh 'terraform init -input=true'
                 }
             }
         }
@@ -44,7 +44,7 @@ pipeline
                 script
                 {
                     // Paln the resources that are going to be created
-                    sh 'terraform plan -input= false'
+                    sh 'terraform plan -input=true'
                 }
             }
         }
