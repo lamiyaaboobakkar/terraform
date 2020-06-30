@@ -39,11 +39,14 @@ pipeline
         }
         stage('Terraform Plan')  
         {
-             script
+            steps
+            {
+                script
                 {
                     // Paln the resources that are going to be created
                     sh 'terraform plan -out=tfplan -input= false'
                 }
+            }
         }
         stage('Terraform Apply')
         {
