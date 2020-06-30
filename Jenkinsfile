@@ -33,7 +33,7 @@ pipeline
                 script
                 {
                     // Initialize Terraform
-                    sh 'terraform init -input=false'
+                    sh 'terraform init'
                 }
             }
         }
