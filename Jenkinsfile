@@ -28,8 +28,7 @@ pipeline
             {
                 script
                 {
-                    withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws-credentials', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']])
-                    // Initialize Terraform
+                    
                     sh 'terraform init -input=false'
                 }
             }
